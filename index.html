@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tetris NES Style</title>
+<style>
+  body {
+    background: black;
+    color: #0ff;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  #game {
+    display: flex;
+    gap: 20px;
+  }
+  canvas#board {
+    background: #000;
+    border: 4px solid #0ff;
+  }
+  .panel {
+    border: 4px solid #0ff;
+    padding: 10px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .box {
+    border: 2px solid #0ff;
+    padding: 8px;
+    text-align: center;
+  }
+  h2 {
+    margin: 0 0 10px 0;
+    font-weight: normal;
+  }
+  #nextCanvas {
+    background: #000;
+    border: 2px solid #0ff;
+  }
+</style>
+</head>
+<body>
+  <div id="game">
+    <canvas id="board" width="300" height="600"></canvas>
+
+    <div class="panel">
+      <div class="box">
+        <h2>NEXT</h2>
+        <canvas id="nextCanvas" width="100" height="100"></canvas>
+      </div>
+
+      <div class="box">
+        <h2>SCORE</h2>
+        <div id="score">0</div>
+      </div>
+
+      <div class="box">
+        <h2>LEVEL</h2>
+        <div id="level">0</div>
+      </div>
+
+      <div class="box">
+        <h2>LINES</h2>
+        <div id="lines">0</div>
+      </div>
+
+      <div class="box">
+        <h2>STATISTICS</h2>
+        <div id="stats"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="tetris.js"></script>
+</body>
+</html>
